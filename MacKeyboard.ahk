@@ -18,34 +18,32 @@ SetTitleMatchMode 2
 SendMode Input
 
 
-; --------------------------------------------------------------
-; media/function keys all mapped to the right option key
-; --------------------------------------------------------------
+; swap command/windows key alt
+LWin::LAlt
+LAlt::LCtrl
+LCtrl::LWin
 
-RAlt & F7::SendInput {Media_Prev}
-RAlt & F8::SendInput {Media_Play_Pause}
-RAlt & F9::SendInput {Media_Next}
-F10::SendInput {Volume_Mute}
-F11::SendInput {Volume_Down}
-F12::SendInput {Volume_Up}
+RAlt::RCtrl
+RWin::RAlt
+;RCtrl::RWin
 
-; swap left command/windows key with left alt
-;LWin::LAlt
-;LAlt::LWin ; add a semicolon in front of this line if you want to disable the windows key
+; Das rebindings
+AppsKey::RCtrl
+RCtrl::F16
 
-; Eject Key
-;F20::SendInput {Insert} ; F20 doesn't show up on AHK anymore, see #3
+
+; Media Bindings
+;F24 & PgUp::SendInput {VolumeUp}
+;F24 & PgDown::SendInput {VolumeDown}
+;F24 & Ins::SendInput {Media_Play_Pause}
+;F24 & Delete::SendInput {Media_Prev}
+;F24 & End::SendInput {Media_Next}
+
 
 ; F13-15, standard windows mapping
 F13::SendInput {PrintScreen}
 F14::SendInput {ScrollLock}
 F15::SendInput {Pause}
-
-;F16-19 custom app launchers, see http://www.autohotkey.com/docs/Tutorial.htm for usage info
-F16::Run http://twitter.com
-F17::Run http://tumblr.com
-F18::Run http://www.reddit.com
-F19::Run https://facebook.com
 
 ; --------------------------------------------------------------
 ; OS X system shortcuts
